@@ -23,6 +23,8 @@ Dog::Dog() : Animal()
 Dog::Dog(Dog const& src) : Animal(src)
 {
 	std::cout << "Dog copy constructor" << std::endl;
+	this->_type = "Dog";
+	this->_DogBrain = new Brain();
 	*this = src;
 }
 
@@ -42,4 +44,9 @@ Dog&	Dog::operator=(Dog const& rhs)
 void    Dog::makeSound() const
 {
     std::cout << "Ouaf ouaf !" << std::endl;
+}
+
+Brain	*Dog::getBrain() const
+{
+	return(this->_DogBrain);
 }
