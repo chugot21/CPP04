@@ -6,6 +6,7 @@ SRCS =	main.cpp \
 		Dog.cpp \
 		WrongAnimal.cpp \
 		WrongCat.cpp \
+		Brain.cpp \
 
 CC = c++
 

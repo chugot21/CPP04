@@ -28,7 +28,7 @@ class Dog : public Animal
 
 		Dog&	operator=(Dog const& rhs);
         void    makeSound() const;
-		Brain	*Dog::getBrain() const;
+		Brain*	getBrain() const;
 };
 
 #endif
