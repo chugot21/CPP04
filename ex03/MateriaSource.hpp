@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clara <clara@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/07 18:02:32 by clara             #+#    #+#             */
-/*   Updated: 2024/02/09 15:48:22 by clara            ###   ########.fr       */
+/*   Created: 2024/02/09 17:46:45 by clara             #+#    #+#             */
+/*   Updated: 2024/02/09 22:16:30 by clara            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
-# include <iostream>
-# include "Brain.hpp"
+#ifndef MATERIASOURCE_HPP
+# define MATERIASOURCE_HPP
+# include "AMateria.hpp"
 
-class Animal
+class IMateriaSource
 {
 	protected:
 
-		std::string	_type;
-
+		AMateria	*(_stock[4]);
+		
 	public:
 
-		Animal();
-		Animal(Animal const& src);
-		virtual ~Animal();
+		IMateriaSource();
+		IMateriaSource(IMateriaSource const& src);
+		virtual ~IMateriaSource();
+		IMateriaSource& operator=(IMateriaSource const& rhs);
 
-		Animal&	operator=(Animal const& rhs);
-
-		virtual void		makeSound() const;
-		virtual std::string	getType() const;
+		AMateria	*getmateria(int idx) const;
+		virtual void learnMateria(AMateria*) = 0;
+		virtual AMateria* createMateria(std::string const & type) = 0;
 
 };
 

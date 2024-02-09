@@ -6,20 +6,20 @@
 /*   By: clara <clara@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 18:21:47 by clara             #+#    #+#             */
-/*   Updated: 2024/02/09 13:20:42 by clara            ###   ########.fr       */
+/*   Updated: 2024/02/09 15:54:41 by clara            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
 #include "Brain.hpp"
 
 int main()
 {
-	/*std::cout << "------Test creating animals------" << std::endl;
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+	std::cout << "------Test creating animals------" << std::endl;
+	const AAnimal* j = new Dog();
+	const AAnimal* i = new Cat();
 
 	i->makeSound();
 	std::cout << i->getType() << std::endl;
@@ -27,7 +27,7 @@ int main()
 	std::cout << j->getType() << std::endl;
 
 	delete j;
-	delete i;*/
+	delete i;
 
 	/*std::cout << "-----Test 1 copy all caracteristics = ------" << std::endl;
 
@@ -43,8 +43,8 @@ int main()
 	copy_cat.makeSound();
 	std::cout << copy_dog.getType() << std::endl;*/
 
-	std::cout << "-----Test array of Animals-----" << std::endl;
-	Animal *(tab[20]);
+	/*std::cout << "-----Test array of Animals-----" << std::endl;
+	AAnimal *(tab[20]);
 
 	for(int i = 0; i < 5; i++)
 		tab[i] = new Cat();
@@ -57,7 +57,7 @@ int main()
 	std::cout << tab[6]->getType() << std::endl;
 
 	for(int i = 0; i < 10; i++)
-		delete tab[i];
+		delete tab[i];*/
 	
 	return 0;
 }

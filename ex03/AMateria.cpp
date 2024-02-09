@@ -1,45 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clara <clara@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/07 18:14:56 by clara             #+#    #+#             */
-/*   Updated: 2024/02/09 15:42:35 by clara            ###   ########.fr       */
+/*   Created: 2024/02/09 16:33:00 by clara             #+#    #+#             */
+/*   Updated: 2024/02/09 18:19:43 by clara            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AMateria.hpp"
 
-Animal::Animal() : _type("Animal")
+AMateria::AMateria(std::string const& type) : _type(type)
 {
-	std::cout << "Animal constructor" << std::endl;
+	return;
 }
 
-Animal::Animal(Animal const& src)
+AMateria::AMateria(AMateria const&  src)
 {
-	std::cout << "Animal copy constructor" << std::endl;
 	this->_type = src.getType();
+	return;
 }
 
-Animal::~Animal()
+AMateria::~AMateria()
 {
-	std::cout << "Animal destructor" << std::endl;
 }
 
-Animal&	Animal::operator=(Animal const& rhs)
+AMateria&   AMateria::operator=(AMateria const& rhs)
 {
 	this->_type = rhs.getType();
 	return *this;
 }
-
-std::string	Animal::getType() const
+	
+std::string const&  AMateria::getType() const
 {
-    return this->_type;
+	return this->_type;
 }
 
-void	Animal::makeSound() const
+void	AMateria::setType(std::string type)
 {
-	std::cout << "*Sound of an animal*" << std::endl;
+	this->_type = type;
+}
+
+AMateria*   AMateria::clone() const
+{
+	return ;
+}
+
+void        AMateria::use(ICharacter& target)
+{
 }

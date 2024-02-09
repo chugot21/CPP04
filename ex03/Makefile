@@ -1,10 +1,10 @@
-NAME =	Animals
+NAME =	AAnimals
 
 SRCS =	main.cpp \
-		Animal.cpp \
-		Cat.cpp \
-		Dog.cpp \
-		Brain.cpp \
+		AMateria.cpp \
+		Character.cpp \
+		Ice.cpp \
+		Cure.cpp \
 
 CC = c++
 

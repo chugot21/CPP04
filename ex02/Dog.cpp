@@ -6,21 +6,21 @@
 /*   By: clara <clara@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 18:20:47 by clara             #+#    #+#             */
-/*   Updated: 2024/02/09 15:41:08 by clara            ###   ########.fr       */
+/*   Updated: 2024/02/09 15:52:28 by clara            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 #include "Brain.hpp"
 
-Dog::Dog() : Animal()
+Dog::Dog() : AAnimal()
 {
 	std::cout << "Dog constructor" << std::endl;
     this->_type = "Dog";
 	this->_DogBrain = new Brain();
 }
 
-Dog::Dog(Dog const& src) : Animal(src)
+Dog::Dog(Dog const& src) : AAnimal(src)
 {
 	std::cout << "Dog copy constructor" << std::endl;
 	this->_type = src.getType();
