@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Character.hpp                                      :+:      :+:    :+:   */
+/*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clara <clara@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,31 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHARACTER_HPP
-# define CHARACTER_HPP
-# include "ICharacter.hpp"
+#ifndef ICHARACTER_HPP
+# define ICHARACTER_HPP
+# include <cstring>
+# include "AMateria.hpp"
 
-class Character : public ICharacter
+class ICharacter
 {
-	private:
-
-		std::string	_name;
-		AMateria	*_inv[4];
-		AMateria	*_floor[100];
+	protected:
+		std::string _name;
 
 	public:
 
-		Character(std::string name);
-		Character(Character const& src);
-		virtual ~Character();
-		Character&	operator=(Character const& rhs);
+		virtual ~ICharacter() {}
 
-		std::string const & getName() const;
-		AMateria	*getmateria(int idx) const;
-		AMateria	*getmateriafloor(int idx) const;
-		void equip(AMateria* m);
-		void unequip(int idx);
-		void use(int idx, Character& target);
+		virtual std::string const & getName() const = 0;
+		virtual void equip(AMateria* m) = 0;
+		virtual void unequip(int idx) = 0;
+		virtual void use(int idx, ICharacter& target) = 0;
 };
 
 #endif

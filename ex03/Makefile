@@ -2,9 +2,10 @@ NAME =	AAnimals
 
 SRCS =	main.cpp \
 		AMateria.cpp \
-		Character.cpp \
 		Ice.cpp \
 		Cure.cpp \
+		Character.cpp \
+		MateriaSource.cpp \
 
 CC = c++
 

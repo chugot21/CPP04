@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
+/*   IMateriaSource.cpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clara <clara@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/09 17:46:45 by clara             #+#    #+#             */
-/*   Updated: 2024/02/09 22:16:30 by clara            ###   ########.fr       */
+/*   Created: 2024/02/09 17:46:40 by clara             #+#    #+#             */
+/*   Updated: 2024/02/09 22:16:24 by clara            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MATERIASOURCE_HPP
-# define MATERIASOURCE_HPP
-# include "IMateriaSource.hpp"
+#ifndef IMATERIASOURCE_HPP
+# define IMATERIASOURCE_HPP
 # include "AMateria.hpp"
 # include "Ice.hpp"
 # include "Cure.hpp"
 
-class MateriaSource : public IMateriaSource
+class IMateriaSource
 {
-	private:
-
-		AMateria	*_stock[4];
-		
 	public:
 
-		MateriaSource();
-		MateriaSource(MateriaSource const& src);
-		virtual ~MateriaSource();
-		MateriaSource& operator=(MateriaSource const& rhs);
+		virtual ~IMateriaSource() {}
 
-		AMateria	*getmateria(int idx) const;
-		void learnMateria(AMateria*);
-		AMateria* createMateria(std::string const & type);
+		virtual void learnMateria(AMateria*) = 0;
+		virtual AMateria* createMateria(std::string const & type) = 0;
 
 };
 

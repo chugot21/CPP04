@@ -14,7 +14,7 @@
 # define AMATERIA_HPP
 # include <iostream>
 # include <cstring>
-# include "Character.hpp"
+# include "ICharacter.hpp"
 
 class AMateria
 {
@@ -26,7 +26,7 @@ class AMateria
 
         AMateria(std::string const & type);
         AMateria(AMateria const&  src);
-        ~AMateria();
+        virtual ~AMateria();
 
         AMateria&   operator=(AMateria const& rhs);
     

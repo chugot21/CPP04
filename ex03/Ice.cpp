@@ -14,13 +14,11 @@
 
 Ice::Ice() : AMateria("ice")
 {
-    //this->setType("ice");
     return;
 }
 
 Ice::Ice(Ice const& src) : AMateria(src.getType())
 {
-    //this->_type = src.getType();
     return;
 }
 

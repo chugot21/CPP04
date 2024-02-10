@@ -11,8 +11,9 @@
 /* ************************************************************************** */
 
 #include "Character.hpp"
+#include "AMateria.hpp"
 
-ICharacter::ICharacter(std::string name) : _name(name)
+Character::Character(std::string name) : _name(name)
 {
 	for (int i = 0; i < 4; i++)
 		this->_inv[i] = 0;
@@ -21,7 +22,7 @@ ICharacter::ICharacter(std::string name) : _name(name)
 	return;
 }
 
-ICharacter::ICharacter(ICharacter const& src) : _name(src.getName())
+Character::Character(Character const& src) : _name(src.getName())
 {
 	for (int j = 0; j < 100; j++)
 	{
@@ -44,7 +45,7 @@ ICharacter::ICharacter(ICharacter const& src) : _name(src.getName())
 	return;
 }
 
-ICharacter::~ICharacter()
+Character::~Character()
 {
 	for (int i = 0; i < 4; i++)
 	{
@@ -58,7 +59,7 @@ ICharacter::~ICharacter()
 	}
 }
 
-ICharacter&	ICharacter::operator=(ICharacter const& rhs)
+Character&	Character::operator=(Character const& rhs)
 {
 	this->_name = rhs.getName();
 	for (int j = 0; j < 100; j++)
@@ -82,12 +83,12 @@ ICharacter&	ICharacter::operator=(ICharacter const& rhs)
 	return *this;
 }
 
-std::string const& ICharacter::getName() const
+std::string const& Character::getName() const
 {
 	return this->_name;
 }
 
-AMateria	*ICharacter::getmateria(int idx) const
+AMateria	*Character::getmateria(int idx) const
 {
 	if (idx < 0 || idx >= 4)
 	{
@@ -102,7 +103,7 @@ AMateria	*ICharacter::getmateria(int idx) const
 	return this->_inv[idx];
 }
 
-AMateria	*ICharacter::getmateriafloor(int idx) const
+AMateria	*Character::getmateriafloor(int idx) const
 {
 	if (idx < 0 || idx >= 100)
 	{
@@ -117,7 +118,7 @@ AMateria	*ICharacter::getmateriafloor(int idx) const
 	return this->_floor[idx];
 }
 
-void ICharacter::equip(AMateria* m)
+void Character::equip(AMateria* m)
 {
 	int i = 0;
 
@@ -139,7 +140,7 @@ void ICharacter::equip(AMateria* m)
 	}
 }
 
-void ICharacter::unequip(int idx)
+void Character::unequip(int idx)
 {
 	int i = 0;
 
@@ -159,7 +160,7 @@ void ICharacter::unequip(int idx)
 	this->_inv[idx] = 0;
 }
 
-void ICharacter::use(int idx, ICharacter& target)
+void Character::use(int idx, Character& target)
 {
 	if (idx < 0 || idx >= 4)
 	{

@@ -17,7 +17,7 @@
 
 int main()
 {
-	/*std::cout << "------Test creating animals------" << std::endl;
+	std::cout << "------Test creating animals------" << std::endl;
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
 
@@ -27,7 +27,7 @@ int main()
 	std::cout << j->getType() << std::endl;
 
 	delete j;
-	delete i;*/
+	delete i;
 
 	/*std::cout << "-----Test 1 copy all caracteristics = ------" << std::endl;
 
@@ -43,7 +43,7 @@ int main()
 	copy_cat.makeSound();
 	std::cout << copy_dog.getType() << std::endl;*/
 
-	std::cout << "-----Test array of Animals-----" << std::endl;
+	/*std::cout << "-----Test array of Animals-----" << std::endl;
 	Animal *(tab[20]);
 
 	for(int i = 0; i < 5; i++)
@@ -57,7 +57,7 @@ int main()
 	std::cout << tab[6]->getType() << std::endl;
 
 	for(int i = 0; i < 10; i++)
-		delete tab[i];
+		delete tab[i];*/
 	
 	return 0;
 }
