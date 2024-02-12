@@ -6,7 +6,7 @@
 /*   By: clara <clara@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 17:43:39 by clara             #+#    #+#             */
-/*   Updated: 2024/02/09 21:59:25 by clara            ###   ########.fr       */
+/*   Updated: 2024/02/12 11:47:27 by clara            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class Character : public ICharacter
 		AMateria	*getmateriafloor(int idx) const;
 		void equip(AMateria* m);
 		void unequip(int idx);
-		void use(int idx, Character& target);
+		void use(int idx, ICharacter& target);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: clara <clara@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 16:23:56 by clara             #+#    #+#             */
-/*   Updated: 2024/02/09 18:20:00 by clara            ###   ########.fr       */
+/*   Updated: 2024/02/12 11:39:49 by clara            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # include <iostream>
 # include <cstring>
 # include "ICharacter.hpp"
+
+class ICharacter;
 
 class AMateria
 {

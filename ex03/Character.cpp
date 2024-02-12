@@ -6,7 +6,7 @@
 /*   By: clara <clara@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 17:38:10 by clara             #+#    #+#             */
-/*   Updated: 2024/02/09 22:03:29 by clara            ###   ########.fr       */
+/*   Updated: 2024/02/12 11:56:03 by clara            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,12 +93,12 @@ AMateria	*Character::getmateria(int idx) const
 	if (idx < 0 || idx >= 4)
 	{
 		std::cout << "Wrong index" << std::endl;
-		return;
+		return 0;
 	}
 	if (!this->_inv[idx])
 	{
 		std::cout << "No materia on this index" << std::endl;
-		return;
+		return 0;
 	}
 	return this->_inv[idx];
 }
@@ -108,12 +108,12 @@ AMateria	*Character::getmateriafloor(int idx) const
 	if (idx < 0 || idx >= 100)
 	{
 		std::cout << "Wrong index for materia on floor" << std::endl;
-		return;
+		return 0;
 	}
 	if (!this->_floor[idx])
 	{
 		std::cout << "No materia on floor on this index" << std::endl;
-		return;
+		return 0;
 	}
 	return this->_floor[idx];
 }
@@ -160,7 +160,7 @@ void Character::unequip(int idx)
 	this->_inv[idx] = 0;
 }
 
-void Character::use(int idx, Character& target)
+void Character::use(int idx, ICharacter& target)
 {
 	if (idx < 0 || idx >= 4)
 	{

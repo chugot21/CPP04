@@ -6,7 +6,7 @@
 /*   By: clara <clara@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 17:36:07 by clara             #+#    #+#             */
-/*   Updated: 2024/02/09 18:26:44 by clara            ###   ########.fr       */
+/*   Updated: 2024/02/12 11:54:20 by clara            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ Cure&    Cure::operator=(Cure const& rhs)
 
 Cure*   Cure::clone() const
 {
-    Cure twincure(*this);
-	return &twincure;
+    Cure *twincure = new Cure();
+	return twincure;
 }
 
 void	Cure::use(ICharacter& target)

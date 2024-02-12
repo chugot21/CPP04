@@ -6,7 +6,7 @@
 /*   By: clara <clara@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 17:46:40 by clara             #+#    #+#             */
-/*   Updated: 2024/02/09 22:16:24 by clara            ###   ########.fr       */
+/*   Updated: 2024/02/12 11:56:21 by clara            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,12 +61,12 @@ AMateria	*MateriaSource::getmateria(int idx) const
 	if (idx < 0 || idx >= 4)
 	{
 		std::cout << "Wrong index" << std::endl;
-		return;
+		return 0;
 	}
 	if (!this->_stock[idx])
 	{
 		std::cout << "No materia on this index" << std::endl;
-		return;
+		return 0;
 	}
 	return this->_stock[idx];
 }

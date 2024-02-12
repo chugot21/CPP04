@@ -6,7 +6,7 @@
 /*   By: clara <clara@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 16:33:00 by clara             #+#    #+#             */
-/*   Updated: 2024/02/09 18:19:43 by clara            ###   ########.fr       */
+/*   Updated: 2024/02/12 11:49:03 by clara            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,6 @@ std::string const&  AMateria::getType() const
 void	AMateria::setType(std::string type)
 {
 	this->_type = type;
-}
-
-AMateria*   AMateria::clone() const
-{
-	return ;
 }
 
 void        AMateria::use(ICharacter& target)

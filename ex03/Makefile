@@ -1,4 +1,4 @@
-NAME =	AAnimals
+NAME =	Materias
 
 SRCS =	main.cpp \
 		AMateria.cpp \

@@ -6,7 +6,7 @@
 /*   By: clara <clara@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 17:43:39 by clara             #+#    #+#             */
-/*   Updated: 2024/02/09 21:59:25 by clara            ###   ########.fr       */
+/*   Updated: 2024/02/12 11:40:26 by clara            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define ICHARACTER_HPP
 # include <cstring>
 # include "AMateria.hpp"
+
+class AMateria;
 
 class ICharacter
 {

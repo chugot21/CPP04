@@ -6,7 +6,7 @@
 /*   By: clara <clara@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 16:46:01 by clara             #+#    #+#             */
-/*   Updated: 2024/02/09 18:22:43 by clara            ###   ########.fr       */
+/*   Updated: 2024/02/12 11:53:49 by clara            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ Ice&    Ice::operator=(Ice const& rhs)
 
 Ice*   Ice::clone() const
 {
-    Ice twinice(*this);
-	return &twinice;
+    Ice *twinice = new Ice();
+	return twinice;
 }
 
 void	Ice::use(ICharacter& target)
