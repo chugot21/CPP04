@@ -21,7 +21,7 @@
 int main()
 {
     //tests fonctions MateriaSource
-    /*IMateriaSource* src = new MateriaSource();
+    IMateriaSource* src = new MateriaSource();
     src->learnMateria(new Ice());
     src->learnMateria(new Cure());
 
@@ -40,11 +40,11 @@ int main()
 
     delete bob;
     delete me;
-    delete src;*/
+    delete src;
 
     //test fonctions Character (floor, inv et )
     
-    ICharacter* me = new Character("me");
+    /*ICharacter* me = new Character("me");
     AMateria*   m1 = new Ice();
     AMateria*   m2 = new Ice();
     AMateria*   m3 = new Cure();
@@ -54,17 +54,12 @@ int main()
     me->equip(m2);
     me->equip(m3);
     me->equip(m4);
-    me->equip(m5);
-    me->unequip(0);
+    me->equip(m5); //Inventory full
+    me->unequip(3);
     me->use(1, *me);
     me->use(2, *me);
-    me->use(3, *me);
-    delete m1;
-    delete m2;
-    delete m3;
-    delete m4;
-    delete m5;
-    delete me;
+    me->use(3, *me); //no materia because unequip before
+    delete me;*/
 
 
     //test Materia clone, basics Ice's and Cure's fonctions

@@ -130,6 +130,7 @@ void Character::equip(AMateria* m)
 	else if (this->_inv[0] && this->_inv[1] && this->_inv[2] && this->_inv[3])
 	{
 		std::cout << "Inventory is full" << std::endl;
+		delete m;
 		return;
 	}
 	else
